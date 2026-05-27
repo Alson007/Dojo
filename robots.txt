@@ -1,0 +1,6 @@
+# Robots.txt pour Dojo Tiaray
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dojotiaray.com/sitemap.xml

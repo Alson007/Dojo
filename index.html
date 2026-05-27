@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Tiaray | Karaté Traditionnel & Moderne</title>
+    <meta name="description" content="Dojo de karaté traditionnel à Paris. Cours pour tous niveaux, tous âges. Premier cours gratuit.">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        html, body { overflow-x: hidden !important; max-width: 100vw !important; }
+        @media screen and (min-width: 901px) {
+            .menu-toggle { display: none !important; }
+            #nav-list { display: flex !important; flex-direction: row !important; position: static !important; width: auto !important; height: auto !important; background: transparent !important; gap: 32px !important; }
+            #nav-list a { display: inline-block !important; font-size: 0.95rem !important; padding: 0 !important; color: var(--muted) !important; background: transparent !important; }
+            #nav-list a::after { display: block !important; }
+        }
+        @media screen and (max-width: 900px) {
+            .navbar { padding: 16px 20px !important; z-index: 1000 !important; display: flex !important; justify-content: flex-start !important; align-items: center !important; }
+            .logo { order: 1 !important; flex-shrink: 0 !important; }
+            .theme-toggle { display: flex !important; order: 2 !important; margin-left: auto !important; margin-right: 12px !important; flex-shrink: 0 !important; }
+            .menu-toggle { display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; width: 44px !important; height: 44px !important; padding: 0 !important; margin: 0 !important; order: 3 !important; flex-shrink: 0 !important; z-index: 10000 !important; background: rgba(59,130,246,0.2) !important; border-radius: 8px !important; border: 1px solid rgba(255,255,255,0.2) !important; cursor: pointer !important; }
+            .menu-toggle span { display: block !important; width: 24px !important; height: 2px !important; background: #ffffff !important; margin: 4px 0 !important; border-radius: 2px !important; }
+            .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px) !important; }
+            .menu-toggle.active span:nth-child(2) { opacity: 0 !important; }
+            .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px) !important; }
+            #nav-list { position: fixed !important; top: 0 !important; right: -100% !important; width: 80% !important; max-width: 320px !important; height: 100vh !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; background: #1e293b !important; z-index: 9999 !important; transition: right 0.3s ease-in-out !important; box-shadow: -5px 0 25px rgba(0,0,0,0.5) !important; padding: 20px !important; gap: 15px !important; }
+            #nav-list.open { right: 0 !important; }
+            #nav-list a { display: block !important; font-size: 1.3rem !important; font-weight: 600 !important; width: 100% !important; text-align: center !important; padding: 15px 10px !important; color: #ffffff !important; text-decoration: none !important; background: rgba(255,255,255,0.05) !important; border-radius: 8px !important; }
+            #nav-list a:hover, #nav-list a.active { background: var(--accent) !important; }
+            #nav-list a::after { display: none !important; }
+        }
+    </style>
+    <!-- 🏷️ Schema.org LocalBusiness pour SEO Local -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Dojo Tiaray",
+  "image": "https://dojotiaray.com/img/DOJO-7.webp",
+  "description": "Dojo de karaté traditionnel à Ambovombe, Madagascar. Cours pour tous niveaux, tous âges. Premier cours gratuit.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Anjatoka II",
+    "addressLocality": "Ambovombe",
+    "addressRegion": "Androy",
+    "postalCode": "",
+    "addressCountry": "MG"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -25.182728347599916,
+    "longitude": 46.091610283597106
+  },
+  "url": "https://dojotiaray.com",
+  "telephone": "+261385373691",
+  "email": "kadiamahavita@gmail.com",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "14:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "30000-70000 MGA",
+  "sportsActivityLocation": "Karate"
+}
+</script>
+
+<!--  Open Graph / Réseaux Sociaux -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dojotiaray.com/">
+<meta property="og:title" content="Dojo Tiaray | Karaté Traditionnel & Moderne">
+<meta property="og:description" content="Karaté traditionnel à Ambovombe, Madagascar. Cours pour tous niveaux, tous âges. Premier cours gratuit.">
+<meta property="og:image" content="https://dojotiaray.com/img/DOJO-7.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+
+<!-- 🐦 Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dojo Tiaray | Karaté Traditionnel">
+<meta name="twitter:description" content="Cours pour tous niveaux, tous âges. Premier cours gratuit.">
+<meta name="twitter:image" content="https://dojotiaray.com/img/DOJO-7.webp">
+</head>
+<body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <nav class="navbar">
+        <a href="index.html" class="logo">DOJO TIARAY <span>空手</span></a>
+        <button class="theme-toggle" aria-label="Changer le thème"><span class="theme-icon">🌙</span></button>
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul id="nav-list">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="cours.html">Cours</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="equipe.html">Équipe</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html" class="btn-nav">Rejoindre</a></li>
+        </ul>
+    </nav>
+    <header id="hero">
+        <div class="video-bg" aria-hidden="true">
+            <video id="video1" class="hero-video active" autoplay muted loop playsinline preload="metadata" poster="img/kumite-6.webp">
+                <source src="img/Kata Karate.mp4" type="video/webm">
+                <source src="img/kids.mp4" type="video/mp4">
+            </video>
+            <video id="video2" class="hero-video" muted loop playsinline preload="metadata" poster="img/kumite-6.webp">
+                <source src="img/kids.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Forgez votre esprit.<br>Maîtrisez votre corps.</h1>
+            <p class="hero-subtitle">Karaté traditionnel dans un dojo moderne. Cours pour tous niveaux, de 4 à 77 ans.</p>
+            <div class="hero-cta">
+                <a href="cours.html" class="btn-primary btn-large">Découvrir nos cours</a>
+                <a href="contact.html" class="btn-outline btn-large">Cours d'essai gratuit</a>
+            </div>
+        </div>
+        <a href="#philosophie" class="scroll-indicator" aria-label="Scroll vers le bas">↓</a>
+    </header>
+    <main>
+        <section id="philosophie" class="section">
+            <div class="container split">
+                <div class="text-block animate-on-scroll">
+                    <h2>Plus qu'un sport, un chemin de vie</h2>
+                    <p>Le Karate Do ne se pratique pas seulement sur le tatami. Il se vit dans la discipline quotidienne, le respect des autres et la recherche constante de l'amélioration de soi.</p>
+                    <p>Notre dojo moderne allie tradition martiale et méthodes pédagogiques contemporaines pour offrir un environnement d'apprentissage optimal.</p>
+                    <ul class="features-list">
+                        <li>Enseignement gradué et sécurisé</li>
+                        <li>Préparation mentale & physique complète</li>
+                        <li>Esprit de famille & bienveillance</li>
+                        <li>Installation moderne et spacieuse</li>
+                    </ul>
+                    <a href="equipe.html" class="btn-primary" style="margin-top: 24px; display: inline-block;">Rencontrer nos senseis</a>
+                </div>
+                <div class="img-block animate-on-scroll stagger-2">
+                    <img src="img/DOJO-7.webp" alt="Intérieur du dojo moderne" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+        <section id="cours-preview" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Nos programmes</h2>
+                <div class="cards-grid">
+                    <article class="card animate-on-scroll stagger-1">
+                        <div class="card-icon">👶</div>
+                        <h3>Mini-Poussins (4-6 ans)</h3>
+                        <p>Motricité, équilibre et premiers pas dans le respect du dojo. Approche ludique et encadrée.</p>
+                        <div class="card-meta"><span>Mercredi 14h-15h</span><span>→</span></div>
+                    </article>
+                    <article class="card animate-on-scroll stagger-2">
+                        <div class="card-icon">🧑</div>
+                        <h3>Jeunes & Adultes</h3>
+                        <p>Kihon, Kata et Kumite adaptés. Renforcement, technique et confiance en soi.</p>
+                        <div class="card-meta"><span>Lun/Mer/Ven 18h-20h</span><span>→</span></div>
+                    </article>
+                    <article class="card animate-on-scroll stagger-3">
+                        <div class="card-icon">🏆</div>
+                        <h3>Compétition</h3>
+                        <p>Préparation aux championnats, travail de pointe et coaching personnalisé.</p>
+                        <div class="card-meta"><span>Samedi 10h-12h</span><span>→</span></div>
+                    </article>
+                </div>
+                <div class="center" style="margin-top: 48px;">
+                    <a href="cours.html" class="btn-outline">Voir tous les cours →</a>
+                </div>
+            </div>
+        </section>
+        <section id="cta" class="section">
+            <div class="container center">
+                <h2 class="animate-on-scroll" style="font-size: 2.5rem; margin-bottom: 20px;">Prêt à rejoindre le tatami ?</h2>
+                <p class="animate-on-scroll stagger-1" style="color: var(--muted); font-size: 1.2rem; max-width: 600px; margin: 0 auto 32px;">
+                    Premier cours d'essai gratuit et sans engagement. Venez tel que vous êtes, nous nous occupons du reste.
+                </p>
+                <div class="animate-on-scroll stagger-2">
+                    <a href="contact.html" class="btn-primary btn-large">Réserver mon essai gratuit</a>
+                    <a href="tarifs.html" class="btn-ghost btn-large" style="margin-left: 16px;">Voir les tarifs</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">DOJO TIARAY <span>空手</span></a>
+                    <p>Dojo de karaté traditionnel dédié à l'excellence martiale et au développement personnel. Depuis 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul><li><a href="cours.html">Cours</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="equipe.html">Équipe</a></li><li><a href="galerie.html">Galerie</a></li></ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul><li><a href="contact.html">Nous contacter</a></li><li><a href="faq.html">FAQ</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Suivez-nous</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/fabienalson?igsh=bHR6eXVoZTltcmJr" target="_blank" rel="noopener">
+                                Instagram
+                                <svg class="social-icon-inline" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/fabien.alson" target="_blank" rel="noopener">
+                                Facebook
+                                <svg class="social-icon-inline" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@KADIAMahatozo" target="_blank" rel="noopener">
+                                YouTube
+                                <svg class="social-icon-inline" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dojo Tiaray. Tous droits réservés. | Fait avec passion 🥋</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
